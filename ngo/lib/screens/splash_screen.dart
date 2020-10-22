@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:ngo/screens/onboarding_screen.dart';
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -21,10 +23,10 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   route() {
-    // Navigator.pushReplacement(
-    //   context,
-    //   MaterialPageRoute(builder: (context) => AuthScreen()),
-    // );
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => OnBoardingScreen()),
+    );
   }
 
   @override
