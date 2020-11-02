@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ngo/screens/register_screen.dart';
 import './screens/splash_screen.dart';
 
 void main() {
@@ -11,11 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SplashScreen(),
+      routes: {
+        RegisterScreen.routeName: (ctx) => RegisterScreen(),
+      },
 
     );
   }

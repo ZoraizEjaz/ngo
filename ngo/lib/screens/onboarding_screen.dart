@@ -3,6 +3,7 @@ import 'dart:io';
 import '../models/slider_model.dart';
 import '../widgets/slide_tile.dart';
 import '../widgets/slide_tile.dart';
+import '../screens/login_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget{
 
@@ -38,6 +39,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    route() {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginScreen()),
+      );
+    }
+
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -109,6 +118,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         ): InkWell(
           onTap: (){
             print("Get Started Now");
+            route();
+
           },
           child: Container(
             height: Platform.isIOS ? 70 : 60,
