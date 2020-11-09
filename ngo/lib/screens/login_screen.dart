@@ -1,5 +1,6 @@
 import 'dart:ffi';
 import 'package:flutter/material.dart';
+import 'package:ngo/screens/activities_screen.dart';
 import '../models/login_request_model.dart';
 import '../screens/register_screen.dart';
 
@@ -43,6 +44,11 @@ class _LoginScreenState extends State<LoginScreen> {
     print(_loginRequest.email);
 
     setState(() {});
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => ActivitiesScreen()),
+    );
   }
 
   @override

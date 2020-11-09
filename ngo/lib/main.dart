@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ngo/screens/activities_screen.dart';
 import 'package:ngo/screens/register_screen.dart';
 import './screens/splash_screen.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       home: SplashScreen(),
       routes: {
         RegisterScreen.routeName: (ctx) => RegisterScreen(),
+        ActivitiesScreen.routeName: (ctx) => ActivitiesScreen(),
       },
 
     );

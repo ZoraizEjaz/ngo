@@ -3,7 +3,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:flutter/material.dart';
 import '../models/register_request_model.dart';
 import '../models/genderModel.dart';
-import '../widgets/cusotm_radio.dart';
+import '../widgets/custom_radio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 
@@ -173,6 +173,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             key: _form,
             child: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   TextFormField(
                     initialValue: _initValues['name'],
@@ -320,9 +321,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                   ),
                   addHeightSpace25(),
-                  Text(
-                    'Date',
-                    style: TextStyle(color: Colors.black54),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Date',
+                      style: TextStyle(color: Colors.black54),
+                    ),
                   ),
                   addHeightSpace10(),
                   FlatButton(
@@ -388,7 +392,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       children: <Widget>[
                         Expanded(
                           child: SizedBox(
-                            height: 84,
+                            height: 86,
                             child:  ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 shrinkWrap: true,
@@ -448,7 +452,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(height: 40.0),
                   Container(
                     height: 45,
-                    padding: EdgeInsets.fromLTRB(50, 0, 50, 0),
+                    width: 350,
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
